@@ -4,5 +4,6 @@ def cargar_mapa(nombre_mapa):
 	lista_mapa = []
 	for i in mapa:
 		lista_mapa.append(list(i.strip()))
+	mapa.close()	
 	return lista_mapa	
 
