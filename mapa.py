@@ -5,3 +5,10 @@ class Mapa():
 		self.alto = len(mapa)
 		self.fichas = 0
 
+	def mostrar_mapa(self, mapa):
+		resultado = []
+		for i in mapa:
+			resultado += (mapa[i] + "\n")
+		return resultado
+
+

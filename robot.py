@@ -3,16 +3,11 @@ class Robot():
 		self.posicion = (0,0)
 		self.direccion = "^"
 
-	def buscar_posicion(self , mapa):
+	def busqueda_robot(self , mapa):
 		for i in mapa:
 			for j in i:
 				if [i][j] == "^" or [i][j] == "<" or [i][j] == ">" or [i][j] == "v" :
 					self.posicion = (i,j)
-
-	def ver_direccion(self , mapa):
-		for i in mapa:
-			for j in i:
-				if [i][j] == "^" or [i][j] == "<" or [i][j] == ">" or [i][j] == "v" :
-					self.direccion == mapa[i][j]		
+					self.mapa = mapa[i][j]	
 
 						
