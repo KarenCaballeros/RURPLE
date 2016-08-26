@@ -9,4 +9,4 @@ nombre_instrucciones =  "instrucciones/" + (input("Ingrese: ")) + ".txt"
 instrucciones= (cargar_instrucciones(nombre_instrucciones))
 
 objeto_mapa = Mapa( nombre_mapa ,  mapa)
-print(objeto_mapa.representacion())
+print(objeto_mapa.representacion(mapa))
