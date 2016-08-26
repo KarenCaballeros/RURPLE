@@ -4,11 +4,21 @@ class Mapa():
 		self.largo = len(mapa[0])
 		self.alto = len(mapa)
 		self.fichas = 0
+		self.mapa = mapa
 
-	def mostrar_mapa(self, mapa):
-		resultado = []
-		for i in mapa:
-			resultado += (mapa[i] + "\n")
-		return resultado
+	def representacion(self):
+		resultado = ""
+		for i in range(0, self.alto):
+			resultado += (self.mapa[i] + "\n")
+		return resultado	
+
+
+
+
+
+
+
+
+
 
 
