@@ -1,4 +1,4 @@
-class Robot(Object):
+class Robot(object):
 	def __init__(self , mapa , instrucciones):
 		self.posicion = (0 , 0)
 		self.direccion = "^"
