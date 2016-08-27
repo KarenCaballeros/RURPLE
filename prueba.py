@@ -11,11 +11,16 @@ nombre_instrucciones =  "instrucciones/" + (input("Ingrese: ")) + ".txt"
 instrucciones= (cargar_instrucciones(nombre_instrucciones))
 
 objeto_mapa = Mapa( nombre_mapa ,  mapa)
-print(objeto_mapa.representacion(mapa))
-
 objeto_robot = Robot(mapa,  instrucciones)
+objeto_robot.busqueda_robot(mapa)
+
+objeto_mapa.representacion(mapa , direccion)
 
 for i in instrucciones:
+	print(i)
 	if i == "MOVE":
-		time.sleep(2)
-		print(objeto_robot.MOVE(instrucciones))
+		print(objeto_robot.posicion)
+		direccion = (objeto_robot.direccion)
+		objeto_robot.MOVE()
+		print(objeto_mapa.representacion(mapa , direccion))
+	
