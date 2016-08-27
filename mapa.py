@@ -3,19 +3,25 @@ class Mapa(object):
 		self.nombre = nombre_mapa
 		self.largo = len(mapa[0])
 		self.alto = len(mapa)
-		self.fichas = 0
-		self.mapa = mapa
+		self.fichas = []
+		self.robot = None
 
 	def representacion(self , mapa):
 		resultado = ""
-		for i in range(0, self.alto):
-			for j in range(0, self.largo):
-				if mapa[i][j] == 0:
-					resultado += " "	
+		for i in mapa:
+			for j in i:
+				if j == "0" :
+					resultado += (" ")
 				else:
-					resultado += mapa[i][j]
+					resultado += (j)
+			resultado += "\n"		
 		return resultado	
 
+	def robot(self , robot): 
+		self.robot = robot
+
+	def agregarminedas(self, monedas):
+		sel.monedas.append(moneda)	
 
 
 
