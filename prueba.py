@@ -14,13 +14,18 @@ objeto_mapa = Mapa( nombre_mapa ,  mapa)
 objeto_robot = Robot(mapa,  instrucciones)
 objeto_robot.busqueda_robot(mapa)
 
-objeto_mapa.representacion(mapa , direccion)
+direccion = (objeto_robot.direccion)
+posicion = (objeto_robot.posicion) 
+objeto_mapa.representacion(mapa , direccion , posicion)
+
+print(objeto_robot.posicion)
+print(objeto_mapa.representacion(mapa , direccion))
+print("")
+print("")
 
 for i in instrucciones:
-	print(i)
-	if i == "MOVE":
-		print(objeto_robot.posicion)
-		direccion = (objeto_robot.direccion)
+	if i.strip() == "MOVE":
 		objeto_robot.MOVE()
+		print(objeto_robot.posicion)
 		print(objeto_mapa.representacion(mapa , direccion))
 	

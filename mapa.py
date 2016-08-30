@@ -6,16 +6,20 @@ class Mapa(object):
 		self.fichas = []
 		self.robot = None
 
-	def representacion(self , mapa , direccion):
+	def representacion(self , mapa , direccion, posicion):
+		x = posicion[0] 
+		y = posicion[1] 
 		resultado = ""
+		if j != direccion and j != "0" and j != " " and j != "*":
+			puntos.append(j)
 		for i in mapa:
 			for j in i:
-				if j == "0" :
-					resultado += (" ")
-				elif j == "*":
-					resultado += direccion		
+				if j == x and i == y:
+					resultado += direccion 
+				elif j == "0":	
+					resultado += " " 
 				else:
-					resultado += (j)
+					resultado+= j	
 			resultado += "\n"
 		resultado += ("_" * self.largo) 			
 		return resultado	
