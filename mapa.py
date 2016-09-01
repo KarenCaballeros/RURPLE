@@ -8,14 +8,12 @@ class Mapa(object):
 
 	def representacion(self , mapa , direccion, posicion):
 		x = posicion[0] 
-		y = posicion[1] 
+		y = posicion[1]
 		resultado = ""
-		if j != direccion and j != "0" and j != " " and j != "*":
-			puntos.append(j)
 		for i in mapa:
 			for j in i:
 				if j == x and i == y:
-					resultado += direccion 
+					resultado += direccion 	
 				elif j == "0":	
 					resultado += " " 
 				else:
@@ -24,11 +22,17 @@ class Mapa(object):
 		resultado += ("_" * self.largo) 			
 		return resultado	
 
-	def robot(self , robot): 
-		self.robot = robot
+	#def robot(self , robot): 
+	#	self.robot = robot
 
-	def agregarmonedas(self, monedas):
-		sel.monedas.append(moneda)	
+	def agregarmonedas(self, mapa, direccion):
+		puntos = []
+		for i in mapa:
+			for j in i:
+				if j != direccion and j != "0" and j != " " and j != "*":
+					puntos.append(j)
+		for i in puntos:
+			self.fichas += i						
 
 
 

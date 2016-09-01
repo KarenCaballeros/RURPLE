@@ -25,12 +25,16 @@ class Robot(object):
 
 	def MOVE(self):
 		if self.direccion == "^":
-			self.posicion = ( self.x , (self.y -1)) 
+			self.y = self.y -1
+			self.posicion = ( self.x , self.y) 
 		elif self.direccion == "v":
-			self.posicion = (self.x , (self.y + 1))
+			self.y = self.y +1
+			self.posicion = (self.x , self.y)
 		elif self.direccion == "<":
-			self.posicion = ((self.x-1) , self.y)
+			self.x = self.x -1
+			self.posicion = (self.x , self.y)
 		elif self.direccion == ">":
-			self.posicion = ((self.x+1) , self.y)			
+			self.x = self.x +1
+			self.posicion = (self.x , self.y)			
 
 						
